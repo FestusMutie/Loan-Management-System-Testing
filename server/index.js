@@ -20,11 +20,11 @@ app.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    // console.log(req.body);
+     console.log(req.body);
     const admin = await pool.query(
       `SELECT * FROM admins WHERE username = '${username}'`
     );
-
+    console.log(admin);
     if (admin.rows.length <= 0) {
       res.status(401).send('Username or password is wrong');
     }
