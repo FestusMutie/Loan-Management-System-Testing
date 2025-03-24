@@ -1,39 +1,62 @@
-# Loan-Management-System
-A comprehensive web-based platform to manage different loans &amp; lenders 
+## Cypress Test Execution Guide
 
-## Introduction
-The Old Credit System Management made it challenging to get a hold of debts and follow lender progress because its processing was entirely manual. Loans often are recorded on a paper/ledger for managers to keep track of each client’s loan. As managers often record their transactions on paper, computing the revenue will be time-consuming.
+## Overview
+This document provides step-by-step instructions on how to set up and run Cypress tests, specifically the test file `Loanspec.cy.js` located in `client/cypress/e2e/`.
 
-With this Financial Technology, you can replace traditional methods which are time-consuming and often require verification of applicants’ credibility and financial information.
-
-## Screenshots
-1) Home page
-![image](https://user-images.githubusercontent.com/87902211/218363272-3eef627d-a1f3-42aa-89d1-0a5f1111b5cc.png)
-
-2) Login page
-![image](https://user-images.githubusercontent.com/87902211/218363351-dc0238e5-108e-45f3-867e-6812e1b024f1.png)
-
-3) Dashboard
-![image](https://user-images.githubusercontent.com/87902211/218363400-3264cfd5-cf78-4ee0-878d-8fb99fd93b19.png)
-
-
-## Tech/Framework Used
-This Project is built with:
-1) React
-2) PostgreSQL
-2) Tailwind.css
-3) Emailjs
-4) Mui-material
-
-## Features
-1) Loan Management - Where managers can update payments or approve loans.
-2) Client Management - Managers can now contact clients through the app.
-3) Payments Management - Avoid payment delays by notifying managers about client's loan.
+## Prerequisites
+-Before running the Cypress tests, ensure you have the following installed:
+- Node.js (v14 or later recommended)
+- npm or yarn
+- Cypress installed in the project
 
 ## Installation
-1) Clone using the following repo link
+If Cypress is not installed, navigate to the project root directory and run:
+```sh
+npm install
+```
+OR
+```sh
+yarn install
+```
+This will install all project dependencies, including Cypress.
 
-git clone https://github.com/ICBroqueza/Loan-Management-System.git
+## Running Cypress Tests
+To execute the test file `Loanspec.cy.js`, follow these steps:
+
+### 1. Open Cypress Test Runner
+Run the following command from the project root:
+```sh
+npx cypress open
+```
+OR
+```sh
+yarn cypress open
+```
+- This opens the Cypress Test Runner.
+- Navigate to `client/cypress/e2e/Loanspec.cy.js` and click on it to execute the test.
+
+### 2. Run Tests in Headless Mode
+If you prefer running tests in headless mode (without UI), use the command:
+```sh
+npx cypress run --spec client/cypress/e2e/Loanspec.cy.js
+```
+OR
+```sh
+yarn cypress run --spec client/cypress/e2e/Loanspec.cy.js
+```
+This will run the tests in the terminal and generate a report.
+
+## Test Report
+After running the tests, you can check the results in the terminal or navigate to the Cypress `videos` and `screenshots` folders for more insights.
+
+## Troubleshooting
+- If tests fail due to missing dependencies, rerun `npm install` or `yarn install`.
+- Ensure the application under test is running before executing Cypress tests if required.
+- Use `npx cypress open --browser chrome` to specify a browser if needed.
+
+
+
+
 
 
 
